@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
 import Head from "next/head";
-import '../styles/globals.css'
-import 'bootstrap/dist/css/bootstrap.css'
+import Layout from '../components/Layout';
+import '../styles/globals.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
 function MyApp({ Component, pageProps }) {
 
   useEffect(()=>{
@@ -14,7 +16,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
