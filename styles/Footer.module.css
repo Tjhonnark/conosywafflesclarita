@@ -2,20 +2,20 @@
     display: flex;
     flex: 1;
     padding: 2rem 0;
-    border-top: 1px solid #b30e0e;
+    border-top: 2px solid #b80000;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    /* background-color: blue; */
   }
   .footer a {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    background-color: green;
+    /* background-color: green; */
   }
   .webapp {
-    background: white;
+    /* background: white; */
     font-size: 1.5rem;
     margin-left: 0.5rem;
   }
