@@ -1,27 +1,37 @@
 .section1 {
-    background-color: blueviolet;
-}
-.section2 {
-    background-color: rgb(29, 93, 212);
-}
-.section3 {
-    background-color: rgb(165, 118, 16);
-}
-.container1 {
+    background-color: rgb(228, 137, 18);
+    width: 100%;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.5em
 }
-.container2 {
-    display: flex;
+.title_s1 {
+    background-color: aliceblue;
+    width: 100%;
 }
-.article1section1 {
-    background-color: rgb(100, 19, 19);
+/* ARTICLE 1 */
+.article1_s1 {
+    background-color: red;
+    flex-basis: 80%;
+}
+.container1_s1 {
+   width: 90%;
+}
+.text1_a1_s1 {
+
+}
+.title_a1_s1 {
     
 }
-.article1section2 {
-    background-color: rgb(20, 113, 156);
+.description1_a1_s1 {
    
 }
-.article2section2 {
-    background-color: rgb(172, 27, 116);
+.picture1_a1_s1 {
+
+}
+.img1_a1_s1 {
     
 }
+/* SECTION 2 */
