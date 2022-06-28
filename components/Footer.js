@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <div className={styles.footer}>
             <a
-                href="google.com"
+                /* href="#" */
                 target="_blank"
                 rel="noopener noreferrer"
             >

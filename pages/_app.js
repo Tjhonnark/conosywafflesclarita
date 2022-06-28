@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Head from "next/head";
 import Layout from '../components/Layout';
+/* STYLES */
 import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+
     </div>
   );
 }
