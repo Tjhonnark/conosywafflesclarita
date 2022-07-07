@@ -1,63 +1,56 @@
 .body {
-  background-color: rgb(124, 209, 162);
+  background-color: #efc260;
   padding: 0 25px;
-}
-.products {
-  /* background-color: rgb(31, 29, 29); */
-  padding: 25px 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
-  gap: 2rem;
+  justify-content: space-between;
 }
-.products h1 {
-    background-color: white;
-    width: 100%;
-    text-align: center;
+.body h1 {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+}
+/* Products */
+.products {
+  padding: 15px 0;
+  flex-basis: 800px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 2rem;
 }
 .card {
   background-color: whitesmoke;
-  width: 350px;
-  margin: 0 15px;
+  flex-basis: 350px;
   border-radius: 15px;
   display: flex;
   flex-flow: row wrap;
 }
-.card_image {
-
+.card figure {
+  position: relative;
+}
+.card figure:before,
+.card figure:after {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.card figure img {
+  width: 100%;
+  height: 100%;
   margin-bottom: 15px;
+  padding: 0;
   border-radius: 15px 15px 0 0;
-}
-.card_image1 {
-    background-image: url(/example.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 230px;
-    margin-bottom: 15px;
-    border-radius: 15px 15px 0 0;
-}
-.card_image2 {
-    background-image: url(/example.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 230px;
-    margin-bottom: 15px;
-    border-radius: 15px 15px 0 0;
-}
-.card_image3 {
-    background-image: url(/example.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 230px;
-    margin-bottom: 15px;
-    border-radius: 15px 15px 0 0;
 }
 .card h3 {
   text-align: center;
+  font-size: 1.5rem;
   width: 100%;
   overflow-wrap: break-word;
 }
-.card a {
+.card button {
   background-color: blue;
   margin: 15px;
   padding: 15px 20px;
@@ -67,11 +60,15 @@
   border-radius: 15px;
   flex-basis: 100%;
 }
-
-.card:hover {
+/* .card:hover {
   background-color: rgba(0, 0, 0, 0.295);
   color: white;
   cursor: pointer;
   transform: scale(1.03);
   transition: all 0.5s ease;
+} */
+
+/* Forms products */
+.formproduct {
+  flex-basis: 455px;
 }

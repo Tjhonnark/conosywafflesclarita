@@ -8,7 +8,7 @@
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 .section1 h1 {
   background-color: aliceblue;
@@ -17,26 +17,48 @@
 }
 /* ARTICLE 1 */
 .article1_s1 {
-  flex-basis: 90%;
-}
-.container1_s1 {
-  width: 100%;
-  margin: 0 auto;
+  background-color: blueviolet;
+  padding: 1rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+  flex-basis: 90%;
   gap: 1rem;
 }
 .text1_a1_s1 {
-  margin: 0 auto;
-  flex-basis: 48%;
+  background-color: red;
+  flex-basis: 450px;
 }
-.picture1_a1_s1 {
-  margin: 0 auto;
-  flex-basis: 50%;
+.article1_s1 figure {
+  background-color: blue;
+  margin: 0;
+  flex-basis: 600px;
 }
-.picture1_a1_s1 img {
+.article1_s1 figure img {
+  width: 100%;
+}
+/* ARTICLE 2 */
+.article2_s1 {
+  background-color: blueviolet;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 90%;
+  gap: 1rem;
+}
+.text1_a2_s1 {
+  background-color: red;
+  flex-basis: 450px;
+}
+.article2_s1 figure {
+  background-color: blue;
+  margin: 0;
+  flex-basis: 600px;
+}
+.article2_s1 figure img {
   width: 100%;
 }
 /* SECTION 2 */

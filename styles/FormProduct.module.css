@@ -1,0 +1,58 @@
+.form {
+  background-color: blue;
+  color: azure;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 100%;
+  gap: 0.5rem;
+}
+.form h3 {
+  color: azure;
+  padding: 0 0 0.5rem 0;
+  text-align: center;
+  flex-basis: 100%;
+}
+.form div input,
+.form div textarea,
+.form button {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: #ffff;
+  border-bottom: 1px solid #d63031;
+}
+.form button {
+  background: #b70e21;
+  border: 0;
+  padding: 1em;
+  border-radius: 15px;
+}
+.form button:hover,
+.form button:focus {
+  background: #f3384e;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+
+.name {
+  flex-basis: 12em;
+}
+.phone {
+  flex-basis: 10em;
+}
+.email {
+  flex-basis: 100%;
+}
+.message {
+  flex-basis: 100%;
+}
+.products {
+  background-color: aqua;
+  flex-basis: 100%;
+}
