@@ -1,13 +1,14 @@
 .form {
-  background-color: blue;
+  background-color: #212529;
   color: azure;
-  margin: 15px;
+  height: 550px;
+  margin-top: 15px;
   padding: 15px;
   border-radius: 15px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  flex-basis: 100%;
+  flex-basis: 25rem;
   gap: 0.5rem;
 }
 .form h3 {
@@ -18,7 +19,7 @@
 }
 .form div input,
 .form div textarea,
-.form button {
+.send {
   width: 100%;
   padding: 0.7em;
   border: none;
@@ -27,14 +28,14 @@
   color: #ffff;
   border-bottom: 1px solid #d63031;
 }
-.form button {
+.send {
   background: #b70e21;
   border: 0;
   padding: 1em;
   border-radius: 15px;
 }
-.form button:hover,
-.form button:focus {
+.send:hover,
+.send:focus {
   background: #f3384e;
   transition: background-color 1s ease-out;
   outline: 0;
@@ -53,6 +54,11 @@
   flex-basis: 100%;
 }
 .products {
-  background-color: aqua;
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 100%;
+}
+.products p {
+  margin: 0;
   flex-basis: 100%;
 }

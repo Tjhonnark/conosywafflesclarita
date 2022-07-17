@@ -1,41 +1,55 @@
-import { createContext, useState } from 'react'
-/* import { products } from '../components/data/dataProducts'
-import FormsProduct from '../components/FormsProduct' */
-
-
+import { useState } from 'react'
+/* COMPONENTS */
+import ProductList from '../components/ProductList'
+import ProductForm from '../components/ProductForm'
+/* DATA */
+import { initialProducts } from '../components/data/dataProducts'
 /* STYLES */
-/* import styles from '../styles/Products.module.css' */
-
-
+import styles from '../styles/Products.module.css'
 
 export default function Products() {
 
-    return (
-        <>
+    const [products, setProducts] = useState(initialProducts);
+
+    const productToggleSelect = (productId) => {
+
+        /* const changedProducts = products.map(product => {
             
-        </>
+            const productEdit = {
+                ...product,
+                select: !product.select
+            }
+
+            if (product.id === productId) {
+                return productEdit
+            } else {
+                return product
+            }
+        }) */
+
+        const changedProducts = products.map(product => (
+            product.id === productId
+                ? { ...product, select: !product.select }
+                : product
+        ));
+
+        setProducts(changedProducts)
+    }
+
+    return (
+        <div className={styles.body}>
+            <div className={styles.productList}>
+                <h1>Productos</h1>
+                <ProductList
+                    products={products}
+                    productToggleSelect={productToggleSelect}
+                />
+            </div>
+            <ProductForm
+                products={products}
+                productToggleSelect={productToggleSelect}
+            />
+        </div>
     )
 }
 
-{/* <div className={styles.body}>
-            <h1>Productos</h1>
-            <section className={styles.formproduct}>
-                <FormsProduct title="Realizar pedido" />
-            </section>
-            <section className={styles.products}>
-                {
-                    products.map((product) => {
-
-                        return (
-                            <div className={styles.card} key={product.id}>
-                                <figure>
-                                    <img src={product.image} alt="" />
-                                </figure>
-                                <h3>{product.name}</h3>
-                                <button href="">Leer más</button>
-                            </div>
-                        )
-                    })
-                }
-            </section>
-        </div> */}

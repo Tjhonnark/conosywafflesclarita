@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { products } from '../components/data/dataProducts'
+/* COMPONENTS */
+import ProductFormView from './ProductFormView'
 /* STYLES */
-import styles from '../styles/FormProduct.module.css'
+import styles from '../styles/ProductForm.module.css'
 
-export default function FormsProduct(props) {
+const ProductForm = ({ products, productToggleSelect }) => {
 
     const form = useRef();
 
@@ -22,7 +23,7 @@ export default function FormsProduct(props) {
     return (
         <>
             <form ref={form} onSubmit={sendEmail} className={styles.form}>
-                <h3>{props.title}</h3>
+                <h3>Formulario</h3>
                 <div className={styles.name}>
                     <label>Nombre</label>
                     <input type="text" name="user_name" />
@@ -41,10 +42,13 @@ export default function FormsProduct(props) {
                 </div>
                 <div className={styles.products}>
                     <p>Productos escogidos:</p>
-                    <p></p>
+                    {
+                        products.map((product) => <ProductFormView product={product} key={product.id} productToggleSelect={productToggleSelect}/>)
+                    }
                 </div>
                 <button type="submit" value="Send" className={styles.send} >Enviar</button>
             </form>
         </>
     )
 }
+export default ProductForm;
