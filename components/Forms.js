@@ -20,6 +20,13 @@ const Forms = ({ modalFormSend, setModalFormSend }) => {
 
     const [name, setName] = useState();
 
+    const modal = () => {
+        if (name === undefined || name === '') {
+            setModalFormSend(modalFormSend)
+        } else {
+            setModalFormSend(!modalFormSend)
+        }
+    }
     return (
         <>
             <form ref={form} onSubmit={sendEmail} className={styles.form} autoComplete="off">
@@ -47,9 +54,8 @@ const Forms = ({ modalFormSend, setModalFormSend }) => {
                     <textarea name="message" />
                 </div>
                 <button type="submit" value="Send" 
-                disabled={name === '' ? false : true}
                 className={styles.send} 
-                onClick={() => setModalFormSend(!modalFormSend)}>
+                onClick={modal}>
                     Enviar
                 </button>
             </form>
