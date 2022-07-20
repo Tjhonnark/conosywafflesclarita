@@ -12,7 +12,7 @@ const ProductForm = ({ products, productToggleSelect }) => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_h6a8jse', 'template_3jv6aqt', form.current, 'JzMjMHeAhJEb6uKG5')
+        emailjs.sendForm('service_h6a8jse', 'template_a3q76ph', form.current, 'JzMjMHeAhJEb6uKG5')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -20,31 +20,42 @@ const ProductForm = ({ products, productToggleSelect }) => {
             });
     };
 
+    const productSelect = products
+        .filter(product => product.select === true)
+        .map(product => ' ' + product.name)
+    
+    /* .reduce((acum, product) => acum += ' - ' + product.name, '') */
+
     return (
         <>
-            <form ref={form} onSubmit={sendEmail} className={styles.form}>
-                <h3>Formulario</h3>
-                <div className={styles.name}>
-                    <label>Nombre</label>
-                    <input type="text" name="user_name" />
-                </div>
-                <div className={styles.phone}>
-                    <label>Teléfono</label>
-                    <input type="tel" name="phone" />
-                </div>
-                <div className={styles.email}>
-                    <label>Email</label>
-                    <input type="email" name="user_email" />
-                </div>
-                <div className={styles.message}>
-                    <label>Mensaje</label>
-                    <textarea name="message" />
-                </div>
-                <div className={styles.products}>
-                    <p>Productos escogidos:</p>
-                    {
-                        products.map((product) => <ProductFormView product={product} key={product.id} productToggleSelect={productToggleSelect}/>)
-                    }
+            <form ref={form} onSubmit={sendEmail} className={styles.productForm} autoComplete="off">
+                <h3>Formulario de pedidos</h3>
+                <div className={styles.form}>
+                    <div className={styles.name}>
+                        <input type="text" name="user_name" maxLength="25" required/>
+                        <label>Nombre</label>
+                    </div>
+                    <div className={styles.phone}>
+                        <input type="tel" name="phone" maxLength="15" required/>
+                        <label>Teléfono</label>
+                    </div>
+                    <div className={styles.email}>
+                        <input type="email" name="user_email" required/>
+                        <label>Email</label>
+                    </div>
+                    <div className={styles.message}>
+                        <textarea name="message" />
+                        <label>Mensaje</label>
+                    </div>
+                    <div className={styles.products}>
+                        <label>Productos de interés:</label>
+                        <textarea name='products'
+                            className={styles.input}
+                            value={productSelect} />
+                        {
+                            products.map((product) => <ProductFormView product={product} key={product.id} productToggleSelect={productToggleSelect} />)
+                        }
+                    </div>
                 </div>
                 <button type="submit" value="Send" className={styles.send} >Enviar</button>
             </form>

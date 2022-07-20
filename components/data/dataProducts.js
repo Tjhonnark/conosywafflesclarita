@@ -13,7 +13,7 @@ export const initialProducts = [
     },
     {
         id: 3,
-        name: 'Producto3',
+        name: 'Producto 3',
         image: '/example.jpg',
         select: false
     },

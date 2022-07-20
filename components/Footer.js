@@ -2,7 +2,7 @@ import styles from '../styles/Footer.module.css';
 
 export default function Footer() {
     return (
-        <div className={styles.footer}>
+        <footer className={styles.footer}>
             <a
                 /* href="#" */
                 target="_blank"
@@ -11,6 +11,6 @@ export default function Footer() {
                 Powered by{' '}
                 <h3 className={styles.webapp}>WebApp</h3>
             </a>
-        </div>
+        </footer>
     )
 }

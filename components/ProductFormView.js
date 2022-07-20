@@ -5,14 +5,14 @@ export default function ProductFormView({ product, productToggleSelect }) {
         <>
             {product.select ?
                 <div className={styles.product}>
-                    <div className={styles.name}>
+                    <div type='text' name="product" className={styles.name}>
                         {product.name}
                     </div>
                     <button
                         className={styles.button}
                         onClick={() => productToggleSelect(product.id)}
                     >
-                        <i class="bi bi-x-circle-fill"></i>
+                        <i className="bi bi-x-circle-fill"></i>
                     </button>
                 </div>
                 : ""}

@@ -1,3 +1,6 @@
+/* COMPONENTS */
+import Footer from '../components/Footer'
+/* STYLES */
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -24,6 +27,7 @@ export default function Home() {
                     </figure>
                 </article>
             </section>
+            <Footer />
         </div>
     )
 }

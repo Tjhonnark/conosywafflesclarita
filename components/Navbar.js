@@ -4,9 +4,9 @@ import Link from 'next/link';
 export default function Navbar() {
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Offcanvas navbar large">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Logo</a>
+        <a className="navbar-brand" href="#">Conos y Waffles Clarita</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
           <span className="navbar-toggler-icon"></span>
         </button>

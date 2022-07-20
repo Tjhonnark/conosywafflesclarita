@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 /* STYLES */
 import styles from '../styles/Form.module.css'
 
-export default function Forms(props) {
-
+const Forms = ({ modalFormSend, setModalFormSend }) => {
+    
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -18,13 +18,17 @@ export default function Forms(props) {
             });
     };
 
+    const [name, setName] = useState();
+
     return (
         <>
-            <form ref={form} onSubmit={sendEmail} className={styles.form}>
-                <h3>{props.title}</h3>
+            <form ref={form} onSubmit={sendEmail} className={styles.form} autoComplete="off">
+                <h3></h3>
                 <div className={styles.name}>
                     <label>Nombre</label>
-                    <input type="text" name="user_name" />
+                    <input type="text" name="user_name" 
+                    value={name}
+                    onChange={e => setName(e.target.value)} required />
                 </div>
                 <div className={styles.email}>
                     <label>Email</label>
@@ -42,8 +46,14 @@ export default function Forms(props) {
                     <label>Mensaje</label>
                     <textarea name="message" />
                 </div>
-                <button type="submit" value="Send" className={styles.send} >Enviar</button>
+                <button type="submit" value="Send" 
+                disabled={name === '' ? false : true}
+                className={styles.send} 
+                onClick={() => setModalFormSend(!modalFormSend)}>
+                    Enviar
+                </button>
             </form>
         </>
     )
 }
+export default Forms;

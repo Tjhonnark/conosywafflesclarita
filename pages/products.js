@@ -2,6 +2,7 @@ import { useState } from 'react'
 /* COMPONENTS */
 import ProductList from '../components/ProductList'
 import ProductForm from '../components/ProductForm'
+import Footer from '../components/Footer'
 /* DATA */
 import { initialProducts } from '../components/data/dataProducts'
 /* STYLES */
@@ -12,20 +13,6 @@ export default function Products() {
     const [products, setProducts] = useState(initialProducts);
 
     const productToggleSelect = (productId) => {
-
-        /* const changedProducts = products.map(product => {
-            
-            const productEdit = {
-                ...product,
-                select: !product.select
-            }
-
-            if (product.id === productId) {
-                return productEdit
-            } else {
-                return product
-            }
-        }) */
 
         const changedProducts = products.map(product => (
             product.id === productId
@@ -39,7 +26,6 @@ export default function Products() {
     return (
         <div className={styles.body}>
             <div className={styles.productList}>
-                <h1>Productos</h1>
                 <ProductList
                     products={products}
                     productToggleSelect={productToggleSelect}
@@ -49,6 +35,7 @@ export default function Products() {
                 products={products}
                 productToggleSelect={productToggleSelect}
             />
+            <Footer />
         </div>
     )
 }

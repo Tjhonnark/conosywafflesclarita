@@ -23,6 +23,7 @@
   outline: 0;
   color: #ffff;
   border-bottom: 1px solid #d63031;
+  resize: none;
 }
 .form button {
   background: #b70e21;

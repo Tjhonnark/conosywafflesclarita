@@ -1,6 +1,10 @@
+/* COMPONENTS */
+import Footer from '../components/Footer'
+/* STYLES */
 import styles from '../styles/About.module.css'
 
 export default function About() {
+
     return (
         <div className={styles.body}>
             <section className={styles.section1}>
@@ -17,6 +21,7 @@ export default function About() {
                     </div>
                 </article>
             </section>
+            <Footer />
         </div>
     )
 } 

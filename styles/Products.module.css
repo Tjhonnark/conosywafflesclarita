@@ -1,19 +1,23 @@
 .body {
-  background-color: #efc260;
+  background-color: #f4d03f;
+  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+  padding-top: 55px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 .productList {
-  flex-basis: 800px;
+  flex-basis: 949px;
+  margin-top: 2rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  gap: 1rem;
+  justify-content: space-evenly;
+  gap: 2rem;
 }
 .productList h1 {
   color: aliceblue;
   margin-top: 10px;
+  text-align: center;
   flex-basis: 100%;
 }

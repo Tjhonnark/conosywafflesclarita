@@ -1,5 +1,6 @@
 .body {
   background-color: rgb(26, 25, 25);
+  padding-top: 55px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
