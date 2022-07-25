@@ -2,6 +2,7 @@ import { useState } from 'react';
 /* COMPONENTS */
 import Forms from '../components/Forms.js';
 import FormSend from '../components/modals/FormSend.js';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 /* STYLES */
 import styles from '../styles/Contact.module.css'
@@ -12,6 +13,7 @@ const Contact = () => {
 
     return (
         <div className={styles.body}>
+            <Navbar />
             <h1>Contáctenos <span>CONOMOVÍL</span></h1>
             <section className={styles.contact}>
                 <div className={styles.contact_form}>

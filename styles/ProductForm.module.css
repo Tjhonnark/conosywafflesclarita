@@ -1,6 +1,4 @@
 .productForm {
-  background-color: rgba(255, 255, 255, 0.39);
-  box-shadow: 0 0 20px 0 rgb(255, 255, 255, 0.3);
   height: 615px;
   width: 25rem;
   padding: 15px;
@@ -12,12 +10,12 @@
   align-items: flex-start;
 }
 .productForm h3 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   flex-basis: auto;
 }
 .form {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 10px;
   position: absolute;
   top: 3.5rem;

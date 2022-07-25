@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import styles from '../styles/Form.module.css'
 
 const Forms = ({ modalFormSend, setModalFormSend }) => {
-    
+
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -19,31 +19,38 @@ const Forms = ({ modalFormSend, setModalFormSend }) => {
     };
 
     const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [phone, setPhone] = useState();
 
     const modal = () => {
-        if (name === undefined || name === '') {
+        if (name === undefined || name === '' || email === undefined || email === '' || phone === undefined || phone === '') {
             setModalFormSend(modalFormSend)
         } else {
             setModalFormSend(!modalFormSend)
         }
     }
+    
     return (
         <>
             <form ref={form} onSubmit={sendEmail} className={styles.form} autoComplete="off">
                 <h3></h3>
                 <div className={styles.name}>
                     <label>Nombre</label>
-                    <input type="text" name="user_name" 
-                    value={name}
-                    onChange={e => setName(e.target.value)} required />
+                    <input type="text" name="user_name"
+                        value={name}
+                        onChange={e => setName(e.target.value)} required />
                 </div>
                 <div className={styles.email}>
                     <label>Email</label>
-                    <input type="email" name="user_email" />
+                    <input type="email" name="user_email"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)} required />
                 </div>
                 <div className={styles.phone}>
                     <label>Teléfono</label>
-                    <input type="tel" name="phone" />
+                    <input type="tel" name="phone"
+                        value={phone}
+                        onChange={e => setPhone(e.target.value)} required />
                 </div>
                 <div className={styles.affair}>
                     <label>Asunto</label>
@@ -53,9 +60,9 @@ const Forms = ({ modalFormSend, setModalFormSend }) => {
                     <label>Mensaje</label>
                     <textarea name="message" />
                 </div>
-                <button type="submit" value="Send" 
-                className={styles.send} 
-                onClick={modal}>
+                <button type="submit" value="Send"
+                    className={styles.send}
+                    onClick={modal}>
                     Enviar
                 </button>
             </form>

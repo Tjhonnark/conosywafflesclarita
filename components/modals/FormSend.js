@@ -7,15 +7,19 @@ const FormSend = ({modalFormSend, setModalFormSend }) => {
         <>
             <div className={modalFormSend?styles.container:styles.container2}>
                 <div className={styles.modal}>
+                <div className={styles.ifake}></div>
+                <i class="bi bi-check-circle-fill"></i>
                     <div className={styles.header}>
-                        <h3>TITLE</h3>
+                        <h3>¡Gracias!</h3>
                     </div>
                     <div className={styles.body}>
-                        Creando tu primer MODAL
+                        <p>
+                        Sus datos han sido enviados con éxito.
+                        </p>
                     </div>
                     <div className={styles.footer}>
                         <button onClick={() => setModalFormSend(!modalFormSend)}>
-                            Sal perro
+                            Ok
                         </button>
                     </div>
                 </div>

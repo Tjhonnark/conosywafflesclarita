@@ -1,6 +1,5 @@
 .body {
-  background-color: #f4d03f;
-  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+  background-color: rgb(58, 58, 58);
   padding-top: 55px;
   display: flex;
   flex-flow: row wrap;

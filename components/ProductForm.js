@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 /* COMPONENTS */
 import ProductFormView from './ProductFormView'
 /* STYLES */
 import styles from '../styles/ProductForm.module.css'
 
-const ProductForm = ({ products, productToggleSelect }) => {
+const ProductForm = ({ products, productToggleSelect, modalFormSend, setModalFormSend }) => {
 
     const form = useRef();
 
@@ -26,21 +26,36 @@ const ProductForm = ({ products, productToggleSelect }) => {
     
     /* .reduce((acum, product) => acum += ' - ' + product.name, '') */
 
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [phone, setPhone] = useState();
+
+    const modal = () => {
+        if (name === undefined || name === '' || email === undefined || email === '' || phone === undefined || phone === '') {
+            setModalFormSend(modalFormSend)
+        } else {
+            setModalFormSend(!modalFormSend)
+        }
+    }
+
     return (
         <>
             <form ref={form} onSubmit={sendEmail} className={styles.productForm} autoComplete="off">
                 <h3>Formulario de pedidos</h3>
                 <div className={styles.form}>
                     <div className={styles.name}>
-                        <input type="text" name="user_name" maxLength="25" required/>
+                        <input type="text" name="user_name" maxLength="25" value={name}
+                        onChange={e => setName(e.target.value)} required/>
                         <label>Nombre</label>
                     </div>
                     <div className={styles.phone}>
-                        <input type="tel" name="phone" maxLength="15" required/>
+                        <input type="tel" name="phone" maxLength="15" value={phone}
+                        onChange={e => setPhone(e.target.value)} required/>
                         <label>Teléfono</label>
                     </div>
                     <div className={styles.email}>
-                        <input type="email" name="user_email" required/>
+                        <input type="email" name="user_email" value={email}
+                        onChange={e => setEmail(e.target.value)} required/>
                         <label>Email</label>
                     </div>
                     <div className={styles.message}>
@@ -57,7 +72,7 @@ const ProductForm = ({ products, productToggleSelect }) => {
                         }
                     </div>
                 </div>
-                <button type="submit" value="Send" className={styles.send} >Enviar</button>
+                <button type="submit" value="Send" onClick={modal} className={styles.send} >Enviar</button>
             </form>
         </>
     )
