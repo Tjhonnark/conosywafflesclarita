@@ -62,7 +62,7 @@
   transform: translateY(-1px);
 }
 .section1 figure {
-  flex-basis: 1350px;
+  flex-basis: 1370px;
 }
 .section1 figure img {
   width: 100%;
@@ -200,9 +200,13 @@
 /* SECTION 3 */
 .section3 {
   margin-top: 5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 .section3 figure {
-  width: 1350px;
+  flex-basis: 1370px;
+  height: 700px;
   margin: 0;
 }
 .section3 figure img {
