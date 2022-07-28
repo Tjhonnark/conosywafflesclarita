@@ -5,7 +5,10 @@ export default function ProductFormView({ product, productToggleSelect }) {
         <>
             {product.select ?
                 <div className={styles.product}>
-                    <div type='text' name="product" className={styles.name}>
+                    <figure name="productImage" className={styles.figure}>
+                        <img src={product.image} alt="" />
+                    </figure>
+                    <div type='text' name="productName" className={styles.name}>
                         {product.name}
                     </div>
                     <button

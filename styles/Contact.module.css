@@ -1,49 +1,88 @@
 .body {
-  background-color: #FC3C74;
-  padding-top: 55px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  background-color: #fc3c74;
 }
 .body h1 {
   color: azure;
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
   flex-basis: 100%;
   text-align: center;
 }
-.contact {
-  color: azure;
-  margin: 1rem 0 3rem 0;
-  /* box-shadow: 0 0 20px 0 rgb(255, 255, 255, .3); */
-  flex-basis: 90%;
+
+/* SECTION 1 */
+.section1 {
+  background-color: rgb(44, 196, 90);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.text_s1 {
+  background-color: #690000;
+  width: 350px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.text_s1 h1 {
+  background-color: aqua;
+  text-align: start;
+  margin: 0;
+}
+.text_s1 p {
+  margin: 0;
+}
+.text_s1 button {
+  margin: 0;
+}
+.section1 figure {
+  width: 650px;
+  margin: 0;
+}
+.section1 figure img {
+  width: 100%;
+}
+
+/* SECTION 2 */
+.section2 {
+  background-color: rebeccapurple;
+  padding: 2rem 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: stretch;
 }
-.contact_form {
-  background-color: #222222;
-  padding: 1.5em;
-  display: flex;
-  flex-basis: 825px;
+/* MAP */
+.map {
+  width: 700px;
+  height: 400px;
 }
+/* INFO */
 .info {
-  background-color: rgb(0, 0, 0);
-  color: azure;
-  padding: 1em;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  flex-basis: 300px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  flex-basis: 350px;
+  align-items: center;
   gap: 1em;
 }
-.info ul {
-  list-style: none;
-  width: 115%;
-  position: relative;
-  left: -34px;
+
+/* SECTION 3 */
+.section3 {
+  background-color: blue;
+  padding-top: 2rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.5em;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
-.info ul li i {
-    padding-right: 5px;
+/* FORM */
+.contact_form {
+  background-color: #ffffff;
+  padding: 1.5em;
+  display: flex;
+  flex-basis: 505px;
 }

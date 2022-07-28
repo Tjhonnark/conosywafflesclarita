@@ -1,14 +1,19 @@
 /* STYLES */
 import styles from '../../styles/Modals/FormSend.module.css'
 
-const FormSend = ({modalFormSend, setModalFormSend }) => {
+const FormSend = ({ modalFormSend, setModalFormSend }) => {
+
+    const resetForm = () => {
+        setModalFormSend(!modalFormSend)
+        window.location.reload();
+    }
 
     return (
         <>
             <div className={modalFormSend?styles.container:styles.container2}>
                 <div className={styles.modal}>
                 <div className={styles.ifake}></div>
-                <i class="bi bi-check-circle-fill"></i>
+                <i className="bi bi-check-circle-fill"></i>
                     <div className={styles.header}>
                         <h3>¡Gracias!</h3>
                     </div>
@@ -18,7 +23,7 @@ const FormSend = ({modalFormSend, setModalFormSend }) => {
                         </p>
                     </div>
                     <div className={styles.footer}>
-                        <button onClick={() => setModalFormSend(!modalFormSend)}>
+                        <button onClick={resetForm}>
                             Ok
                         </button>
                     </div>

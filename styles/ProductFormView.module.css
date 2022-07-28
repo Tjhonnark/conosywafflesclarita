@@ -1,9 +1,23 @@
 .product {
-  background-color: #ffffff;
+  background-color: #ECECEC;
   color: rgb(255, 255, 255);
   border-radius: 55px;
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
+}
+.figure {
+  width: 70px;
+  height: 50px;
+  margin: 0;
+}
+.figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px 0 0 35px;
+  object-fit: cover;
+  object-position: center;
 }
 .name {
   color: black;
@@ -12,6 +26,7 @@
 .button {
   background-color: rgba(0, 0, 0, 0);
   color: red;
-  padding: 0 5px 0 0;
+  margin: 0 10px 0 0;
   border: 0;
+  font-size: 1.4rem;
 }

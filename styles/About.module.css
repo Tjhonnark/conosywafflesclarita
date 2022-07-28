@@ -1,5 +1,5 @@
 .body {
-  background-color: #fff;
+  background-color: #fc3c74;
 }
 /* SECTION 1 */
 .section1 {
@@ -180,5 +180,12 @@
   margin: 2rem 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 2rem;
+}
+.s5_container figure {
+  width: 120px;
+}
+.s5_container figure img {
+  width: 100%;
 }

@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from "next/head";
+/* COMPONENTS */
 import Layout from '../components/Layout';
 /* STYLES */
 import '../styles/globals.css';
@@ -11,6 +12,31 @@ function MyApp({ Component, pageProps }) {
     import('bootstrap/dist/js/bootstrap');
   }, [])
 
+  // Scroll Up
+
+  const [styleScrollUp, setStyleScrollUp] = useState(true);
+
+  // Scroll Up hidden
+  useEffect(() => {
+    addEventListener('scroll', (event) => {
+      var scroll = document.documentElement.scrollTop;
+      if (scroll < 600) {
+        setStyleScrollUp(true);
+      } else {
+        setStyleScrollUp(false);
+      }
+    });
+  }, [])
+
+  // Scroll Up function 
+  const scrollUpFunction = () => {
+    var currentScroll = document.documentElement.scrollTop;
+    if (currentScroll > 0) {
+      /* window.requestAnimationFrame(scrollUp); */
+      window.scrollTo(0, 0);
+    }
+  }
+
   return (
     <div>
       <Head>
@@ -20,7 +46,11 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Layout>
-        <Component {...pageProps} />
+        <Component 
+        {...pageProps}
+        scrollUpFunction={scrollUpFunction}
+        styleScrollUp={styleScrollUp}
+        />
       </Layout>
 
     </div>

@@ -1,21 +1,108 @@
 .footer {
+  background-color: #550219;
   flex-basis: 100%;
-  display: flex;
   margin-top: 3rem;
   padding: 2rem 0;
-  border-top: 2px solid #b80000;
-  justify-content: center;
+  border-top: 1px solid #ccccccaf;
+  display: flex;
+  flex-flow: column wrap;
   align-items: center;
+  gap: 1.5rem;
 }
-.footer a {
+/* FOOTER WEB */
+.container {
+  color: aliceblue;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.container h4 {
+  font-size: 2rem;
+}
+.container a:hover {
+  color: rgb(0, 0, 0);
+}
+/* LINK PAGES */
+.linkPages {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+}
+.linkPages a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.linkPages a i {
+  margin-right: 5px;
+}
+/* LINK SECTION */
+.linkSection {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+}
+.linkSection a {
+  color: aliceblue;
+  text-decoration: none;
+}
+/* LINK PRODUCTS */
+.linkProduct {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+.linkProduct h4 {
+  width: 100%;
+}
+.items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.items a {
+  color: aliceblue;
+  text-decoration: none;
+}
+/* INFO */
+.info {
+  color: azure;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 400px;
+  gap: 1em;
+}
+
+/* WEBAPP */
+.webapp a {
+  color: aliceblue;
+  margin: 0 0 2rem 0;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  /* background-color: green; */
 }
-.webapp {
-  /* background: white; */
-  font-size: 1.5rem;
+.webapp a:hover {
+  color: rgb(255, 255, 255);
+}
+.webapp_title {
+  color: #fff;
   margin-left: 0.5rem;
+  text-shadow: #FC3C74 3px 2px;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: all 0.3s ease 0s;
+}
+.webapp_title:hover {
+  color: #FC3C74;
+  text-shadow: #fff 3px 2px;
+  transform: scale(1.1);
+  transition: all 0.3s ease 0s;
 }

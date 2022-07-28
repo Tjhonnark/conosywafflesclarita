@@ -1,48 +1,105 @@
+/* CARD SELECTED */
+.card_select {
+  background-color: rgb(236, 236, 236);
+  flex-basis: 350px;
+  border-radius: 15px;
+  box-shadow: 0.3em 0.3em 0.7em #00000015;
+  transition: border 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: #006fff 0.2em solid;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  transform: scale(1.02);
+  transition: all 0.5s ease;
+}
+.card_select:hover {
+  
+}
+.card_select figure {
+  position: relative;
+}
+.card_select figure:before,
+.card_select figure:after {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.card_select figure img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+  padding: 0;
+  border-radius: 10px 10px 0 0;
+}
+/* CARD */
 .card {
-    background-color: whitesmoke;
-    flex-basis: 350px;
-    border-radius: 15px;
-    display: flex;
-    flex-flow: row wrap;
-  }
-  .card figure {
-    position: relative;
-  }
-  .card figure:before,
-  .card figure:after {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
-  .card figure img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 15px;
-    padding: 0;
-    border-radius: 15px 15px 0 0;
-  }
-  .card h3 {
-    text-align: center;
-    font-size: 1.5rem;
-    width: 100%;
-    overflow-wrap: break-word;
-  }
-  .card button {
-    background-color: blue;
-    margin: 15px;
-    padding: 15px 20px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 15px;
-    flex-basis: 100%;
-  }
-  /* .card:hover {
-      background-color: rgba(0, 0, 0, 0.295);
-      color: white;
-      cursor: pointer;
-      transform: scale(1.03);
-      transition: all 0.5s ease;
-    } */
+  background-color: #fff;
+  flex-basis: 350px;
+  border-radius: 15px;
+  box-shadow: 0.3em 0.3em 0.7em #00000015;
+  border: #fc3c74 0.2em solid;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+.card:hover {
+}
+.card figure {
+  position: relative;
+}
+.card figure:before,
+.card figure:after {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.card figure img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+  padding: 0;
+  border-radius: 10px 10px 0 0;
+}
+.card_text {
+  padding: 0 0 1rem 0;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+}
+.card_text h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+/* From uiverse.io */
+.card_text button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.card_text button:hover {
+  background-color: #39cc58;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.card_text button:active {
+  transform: translateY(-1px);
+}

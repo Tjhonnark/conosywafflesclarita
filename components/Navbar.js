@@ -4,6 +4,12 @@ import Link from 'next/link';
 import styles from '../styles/Navbar.module.css'
 
 export default function Navbar() {
+
+  const link = () => {
+    var sound = new Audio('sounds/close.wav')
+    sound.play()
+  }
+  
   return (
     <nav className={styles.header}>
       <div className={styles.container}>
@@ -11,22 +17,22 @@ export default function Navbar() {
         <div className={styles.navbar}>
           <div className={styles.item}>
             <Link href="/" >
-              <a aria-current="page">Inicio</a>
+              <a aria-current="page" onClick={link}><i className="bi bi-house-fill"></i>Inicio</a>
             </Link>
           </div>
           <div className={styles.item}>
             <Link href="/about">
-              <a aria-current="page">¿Quiénes somos?</a>
+              <a aria-current="page" onClick={link}><i className="bi bi-people-fill"></i>¿Quiénes somos?</a>
             </Link>
           </div>
           <div className={styles.item}>
             <Link href="/products">
-              <a aria-current="page">Productos</a>
+              <a aria-current="page" onClick={link}><i className="bi bi-box-seam"></i>Productos</a>
             </Link>
           </div>
           <div className={styles.item}>
             <Link href="/contact">
-              <a aria-current="page">Contactos</a>
+              <a aria-current="page" onClick={link}><i className="bi bi-envelope-paper-fill"></i>Contactos</a>
             </Link>
           </div>
         </div>

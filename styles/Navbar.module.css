@@ -15,14 +15,13 @@
   margin: 1rem 1rem 0 0;
 }
 .navbar {
-  width: 900px;
+  width: 1000px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 .item {
-  padding: 0.5rem 1rem;
 }
 .item a {
   padding: 1.3em 3em;
@@ -48,4 +47,8 @@
 }
 .item a:active {
   transform: translateY(-1px);
+}
+.item a i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
 }

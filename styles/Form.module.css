@@ -1,17 +1,10 @@
 .form {
-  color: azure;
-  padding: 0 0 2rem 0;
+  color: rgb(0, 0, 0);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   flex-basis: 100%;
-  gap: 1rem;
-}
-.form h3 {
-  color: azure;
-  padding: 0 0 0.5rem 0;
-  text-align: center;
-  flex-basis: 100%;
+  gap: 0.5rem;
 }
 .form div input,
 .form div textarea,
@@ -21,33 +14,38 @@
   border: none;
   background: none;
   outline: 0;
-  color: #ffff;
-  border-bottom: 1px solid #d63031;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
   resize: none;
 }
 .form button {
-  background: #b70e21;
+  background: #000;
+  color: #fff;
   border: 0;
   padding: 1em;
 }
 .form button:hover,
 .form button:focus {
-  background: #f3384e;
-  transition: background-color 1s ease-out;
+  /* transition: background-color 1s ease-out; */
   outline: 0;
+}
+.form button:active {
+  background: #FC3C74;
+  transform: scale(0.95);
+  transition: all 0.5s ease 0s;
 } 
 
 .name {
-  flex-basis: 20em;
+  flex-basis: 13rem;
 }
 .email {
-  flex-basis: 20em;
+  flex-basis: 13rem;
 }
 .phone {
-  flex-basis: 20em;
+  flex-basis: 10rem;
 }
 .affair {
-  flex-basis: 20em;
+  flex-basis: 16rem;
 }
 .message {
   flex-basis: 100%;
