@@ -6,6 +6,13 @@
   flex-basis: 100%;
   gap: 0.5rem;
 }
+.titleForm {
+  width: 100%;
+}
+.titleForm h2 {
+  margin-bottom: 3rem;
+  text-align: start;
+}
 .form div input,
 .form div textarea,
 .form button {

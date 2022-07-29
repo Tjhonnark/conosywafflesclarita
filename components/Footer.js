@@ -73,7 +73,9 @@ export default function Footer(props) {
                     </div>
                 </div>
                 <div className={styles.info}>
-                    <Info />
+                    <Info 
+                        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores assumenda tenetur cupiditate iure dolor voluptatibus consequuntur suscipit magni, ipsa illum doloribus autem ratione officiis beatae error quos, ab aliquam eum?"
+                    />
                 </div>
             </div>
             <div className={styles.webapp}>

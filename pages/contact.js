@@ -1,3 +1,5 @@
+import Link from 'next/link.js';
+import Image from 'next/image'
 import { useState } from 'react';
 /* COMPONENTS */
 import Forms from '../components/Forms.js';
@@ -17,27 +19,52 @@ const Contact = ({ scrollUpFunction, styleScrollUp }) => {
     return (
         <div className={styles.body}>
             <Navbar />
-            <section className={styles.section1}>
+            <section id='section1' className={styles.section1}>
                 <figure>
-                    <img src="/ContactUs.jpg" alt="" />
+                    <Image 
+                    src="/ContactUs2.png" 
+                    alt=""
+                    width={700}
+                    height={600}
+                    objectFit="contain"
+                    />
                 </figure>
                 <div className={styles.text_s1}>
                     <h1>Contáctenos</h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam id quia quibusdam, assumenda atque fugit.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe eum dicta atque est repudiandae neque delectus ex, autem consequatur quos?
                     </p>
-                    <button>Get Started</button>
+                    <Link href="#section2" >
+                        <a className={styles.button_s1}>
+                            Sign up
+                            <div class={styles.arrowWrapper}>
+                                <div class={styles.arrow}></div>
+                            </div>
+                        </a>
+                    </Link>
                 </div>
             </section>
-            <section className={styles.section2}>
+            <section id='section2' className={styles.section2}>
+                <div className={styles.info}>
+                    <Info
+                        text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe eum dicta atque est repudiandae neque delectus ex, autem consequatur quos? Sapiente vel perferendis blanditiis totam voluptatibus! Nobis dicta voluptatum enim."
+                    />
+                </div>
                 <div className={styles.map}>
                     <MapView />
                 </div>
-                <div className={styles.info}>
-                    <Info />
-                </div>
             </section>
-            <section className={styles.section3}>
+            <section id='section3' className={styles.section3}>
+                <figure>
+                    <Image 
+                        src="/ContactUs.png" 
+                        alt=""
+                        width={650}
+                        height={500}
+                        objectFit="contain"
+
+                    />
+                </figure>
                 <div className={styles.contact_form}>
                     <Forms modalFormSend={modalFormSend} setModalFormSend={setModalFormSend} />
                 </div>

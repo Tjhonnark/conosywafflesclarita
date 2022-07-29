@@ -1,8 +1,11 @@
 import Link from 'next/link'
+import Image from 'next/image';
 /* COMPONENTS */
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 import ScrollUp from '../components/ScrollUp'
+/* DATA */
+import { clients } from '../components/data/dataClients';
 /* STYLES */
 import styles from '../styles/About.module.css'
 
@@ -15,17 +18,27 @@ export default function About({ scrollUpFunction, styleScrollUp }) {
                     <div className={styles.text1_a1_s1}>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos fugiat explicabo nobis deleniti sapiente quis assumenda, aspernatur natus nemo nihil eaque totam rem a cum inventore magni vero. Vel, laudantium!</p>
                     </div>
-                    <figure>
-                        <img src="/example.jpg" alt="" />
-                    </figure>
+                    <Image
+                        className={styles.imageA1S1}
+                        src="/example.jpg"
+                        alt=""
+                        width={600}
+                        height={400}
+                        objectFit="cover"
+                    />
                 </article>
                 <article className={styles.article2_s1}>
                     <div className={styles.text1_a2_s1}>
                         <h2>¿Quiénes somos?</h2>
                     </div>
-                    <figure>
-                        <img src="/example.jpg" alt="" />
-                    </figure>
+                    <Image
+                        className={styles.imageA2S1}
+                        src="/example.jpg"
+                        alt=""
+                        width={600}
+                        height={400}
+                        objectFit="cover"
+                    />
                 </article>
             </section>
             <section id='section2' className={styles.section2}>
@@ -37,9 +50,14 @@ export default function About({ scrollUpFunction, styleScrollUp }) {
                     <h1>Visión</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat et numquam laboriosam omnis autem perspiciatis laborum sed voluptatum optio! Vel, quo totam. Iure, totam. Rerum magnam consectetur minima excepturi esse.</p>
                 </div>
-                <figure>
-                    <img src="/icecream.jpg" alt="" />
-                </figure>
+                <Image
+                        className={styles.backgroundS2}
+                        src="/icecream.jpg"
+                        alt=""
+                        width={1350}
+                        height={400}
+                        objectFit="cover"
+                    />
             </section>
             <section id='section3' className={styles.section4}>
                 <div className={styles.s4_title}>
@@ -97,15 +115,20 @@ export default function About({ scrollUpFunction, styleScrollUp }) {
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
                 <div className={styles.s5_container}>
-                    <figure>
-                        <img src="/logo.png" alt="" />
-                    </figure>
-                    <figure>
-                        <img src="/logo.png" alt="" />
-                    </figure>
-                    <figure>
-                        <img src="/logo.png" alt="" />
-                    </figure>
+                    {
+                        clients.map((client) => {
+                            return (
+                                <Image 
+                                className={styles.client}
+                                    src={client.image}
+                                    alt=''
+                                    width={150}
+                                    height={150}
+                                    objectFit="cover"
+                                />
+                            )
+                        })
+                    }
                 </div>
             </section>
             <ScrollUp 

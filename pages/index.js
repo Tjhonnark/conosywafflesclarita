@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 /* COMPONENTS */
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
@@ -11,6 +12,14 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
         <div className={styles.body}>
             <Navbar />
             <section id='section1' className={styles.section1}>
+                <Image
+                    className={styles.imageS1}
+                    src="/icecream.jpg"
+                    alt=""
+                    width={1350}
+                    height={550}
+                    objectFit="cover"
+                />
                 <div className={styles.text1_a1_s1}>
                     <h1>Conos y Waffles Clarita</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -18,9 +27,7 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                         <a>Nuevos productos</a>
                     </Link>
                 </div>
-                <figure>
-                    <img src="/icecream.jpg" alt="" />
-                </figure>
+
             </section>
             <section id='section2' className={styles.section2}>
                 <h1>Nuevos productos</h1>
@@ -32,9 +39,14 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                         </Link>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos fugiat explicabo nobis deleniti sapiente quis assumenda, aspernatur natus nemo nihil eaque totam rem a cum inventore magni vero. Vel, laudantium!</p>
                     </div>
-                    <figure>
-                        <img src="/example.jpg" alt="" />
-                    </figure>
+                    <Image
+                        className={styles.imageA1S2}
+                        src="/example.jpg"
+                        alt=""
+                        width={600}
+                        height={400}
+                        objectFit="cover"
+                    />
                 </article>
                 <article className={styles.article2_s2}>
                     <div className={styles.text1_a2_s2}>
@@ -44,9 +56,14 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                         </Link>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos fugiat explicabo nobis deleniti sapiente quis assumenda, aspernatur natus nemo nihil eaque totam rem a cum inventore magni vero. Vel, laudantium!</p>
                     </div>
-                    <figure>
-                        <img src="/example.jpg" alt="" />
-                    </figure>
+                    <Image
+                        className={styles.imageA2S2}
+                        src="/example.jpg"
+                        alt=""
+                        width={600}
+                        height={400}
+                        objectFit="cover"
+                    />
                 </article>
             </section>
             <section id='section3' className={styles.section3}>
@@ -58,9 +75,14 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                     <h1>Article 1</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos fugiat explicabo nobis deleniti sapiente quis assumenda, aspernatur natus nemo nihil eaque totam rem a cum inventore magni vero. Vel, laudantium!</p>
                 </div>
-                <figure>
-                    <img src="/cityExample.jpg" alt="" />
-                </figure>
+                <Image
+                        className={styles.backgroundS3}
+                        src="/cityExample.jpg"
+                        alt=""
+                        width={1350}
+                        height={700}
+                        objectFit="cover"
+                    />
             </section>
             <section id='section4' className={styles.section4}>
                 <div className={styles.s4_item1}>
@@ -79,11 +101,11 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci dolor officiis natus ipsum saepe aliquam, illum, temporibus laboriosam expedita nulla eius, quas earum et quidem.</p>
                 </div>
             </section>
-            <ScrollUp 
+            <ScrollUp
                 scrollUpFunction={scrollUpFunction}
                 styleScrollUp={styleScrollUp}
             />
-            <Footer 
+            <Footer
                 page="/"
                 section1="Section 1"
                 section2="Section 2"

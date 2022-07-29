@@ -1,22 +1,13 @@
 /* CONTACT INFO */
-  .contact_info {
-    text-align: start;
-    display: flex;
-    flex-flow: column wrap;
-    gap: 0.5em;
-  }
   .contact_item {
   }
   .contact_item i {
       padding-right: 5px;
   }
   .contact_item a {
-    color: aliceblue;
+    color: #000;
     text-decoration: none;
   }
   .contact_item a:hover {
-    color: rgb(59, 164, 255);
-  }
-  .info p {
-    text-align: start;
+    color: rgb(0, 136, 255);
   }
