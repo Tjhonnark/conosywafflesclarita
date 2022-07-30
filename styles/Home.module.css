@@ -52,7 +52,7 @@
   color: #fff;
   background-color: #FC3C74;
   border: none;
-  border-radius: 45px;
+  border-radius: 10px;
   box-shadow: 0px 8px 15px rgba(252, 60, 116, 0.3);
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -109,31 +109,67 @@
 .text1_a1_s2 p {
   font-size: large;
 }
-/* From uiverse.io */
-.text1_a1_s2 a {
-  padding: 1.3em 3em;
-  font-size: 12px;
+/* From uiverse.io by @satyamchaudharydev */
+.button_a1s2 {
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  padding: 0.8em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+.arrowWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.button_a1s2:hover {
+  background-color: var(--primary-color);
   color: #fff;
-  background-color: #000000;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
 }
-.text1_a1_s2 a:hover {
-  background-color: #fff;
-  box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.4);
-  color: #000;
-  transform: translateY(-7px);
+
+.button_a1s2:hover .arrow {
+  background: var(--secondary-color);
 }
-.text1_a1_s2 a:active {
-  transform: translateY(-1px);
+
+.button_a1s2:hover .arrow:before {
+  right: 0;
 }
 .imageA1S2 {
   border-radius: 1rem;
@@ -163,31 +199,67 @@
 .text1_a2_s2 p {
   font-size: large;
 }
-/* From uiverse.io */
-.text1_a2_s2 a {
-  padding: 1.3em 3em;
-  font-size: 12px;
+/* From uiverse.io by @satyamchaudharydev */
+.button_a2s2 {
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  padding: 0.8em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+.arrowWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.button_a2s2:hover {
+  background-color: var(--primary-color);
   color: #fff;
-  background-color: #000;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
 }
-.text1_a2_s2 a:hover {
-  background-color: #fff;
-  box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.4);
-  color: #000;
-  transform: translateY(-7px);
+
+.button_a2s2:hover .arrow {
+  background: var(--secondary-color);
 }
-.text1_a2_s2 a:active {
-  transform: translateY(-1px);
+
+.button_a2s2:hover .arrow:before {
+  right: 0;
 }
 .imageA2S2 {
   border-radius: 1rem;

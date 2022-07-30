@@ -19,34 +19,51 @@
   border-radius: 25px;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 .item {
 }
+/* From uiverse.io by @WhiteNervosa */
 .item a {
-  padding: 1.3em 3em;
-  font-size: 12px;
+  font-size: 18px;
+  color: #000;/* #e1e1e1 */
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
+  font-family: inherit;
+  font-weight: 800;
   cursor: pointer;
-  outline: none;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
+.item a:focus,
 .item a:hover {
-  background-color: #39cc58;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
-  transform: translateY(-7px);
+}
+.item a:focus:after,
+.item a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.item a:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 .item a:active {
-  transform: translateY(-1px);
+  transform: scale(0.5);
+  transition: transform 0.8s ease-in-out;
 }
 .item a i {
   margin-right: 0.5rem;

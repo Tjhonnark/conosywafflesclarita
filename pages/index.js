@@ -23,7 +23,7 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                 <div className={styles.text1_a1_s1}>
                     <h1>Conos y Waffles Clarita</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <Link href='#newProducts'>
+                    <Link href='#section2'>
                         <a>Nuevos productos</a>
                     </Link>
                 </div>
@@ -35,7 +35,12 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                     <div className={styles.text1_a1_s2}>
                         <h2>Article 1</h2>
                         <Link href='/products'>
-                            <a>Ordenar pedido</a>
+                            <a className={styles.button_a1s2}>
+                                Ordenar pedido
+                                <div class={styles.arrowWrapper}>
+                                    <div class={styles.arrow}></div>
+                                </div>
+                            </a>
                         </Link>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos fugiat explicabo nobis deleniti sapiente quis assumenda, aspernatur natus nemo nihil eaque totam rem a cum inventore magni vero. Vel, laudantium!</p>
                     </div>
@@ -52,7 +57,12 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                     <div className={styles.text1_a2_s2}>
                         <h2>Article 2</h2>
                         <Link href='/products'>
-                            <a>Ordenar pedido</a>
+                            <a className={styles.button_a2s2}>
+                                Ordenar pedido
+                                <div class={styles.arrowWrapper}>
+                                    <div class={styles.arrow}></div>
+                                </div>
+                            </a>
                         </Link>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos fugiat explicabo nobis deleniti sapiente quis assumenda, aspernatur natus nemo nihil eaque totam rem a cum inventore magni vero. Vel, laudantium!</p>
                     </div>
@@ -76,13 +86,13 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos fugiat explicabo nobis deleniti sapiente quis assumenda, aspernatur natus nemo nihil eaque totam rem a cum inventore magni vero. Vel, laudantium!</p>
                 </div>
                 <Image
-                        className={styles.backgroundS3}
-                        src="/cityExample.jpg"
-                        alt=""
-                        width={1350}
-                        height={700}
-                        objectFit="cover"
-                    />
+                    className={styles.backgroundS3}
+                    src="/cityExample.jpg"
+                    alt=""
+                    width={1350}
+                    height={700}
+                    objectFit="cover"
+                />
             </section>
             <section id='section4' className={styles.section4}>
                 <div className={styles.s4_item1}>

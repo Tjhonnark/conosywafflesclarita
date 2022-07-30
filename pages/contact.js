@@ -21,12 +21,12 @@ const Contact = ({ scrollUpFunction, styleScrollUp }) => {
             <Navbar />
             <section id='section1' className={styles.section1}>
                 <figure>
-                    <Image 
-                    src="/ContactUs2.png" 
-                    alt=""
-                    width={700}
-                    height={600}
-                    objectFit="contain"
+                    <Image
+                        src="/ContactUs2.png"
+                        alt=""
+                        width={700}
+                        height={600}
+                        objectFit="contain"
                     />
                 </figure>
                 <div className={styles.text_s1}>
@@ -35,11 +35,16 @@ const Contact = ({ scrollUpFunction, styleScrollUp }) => {
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe eum dicta atque est repudiandae neque delectus ex, autem consequatur quos?
                     </p>
                     <Link href="#section2" >
-                        <a className={styles.button_s1}>
-                            Sign up
-                            <div class={styles.arrowWrapper}>
-                                <div class={styles.arrow}></div>
+                        <a className={styles.buttonS1}>
+                            <div class={styles.svgWrapper1}>
+                                <div class={styles.svgWrapper}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                    </svg>
+                                </div>
                             </div>
+                            <span>Email</span>
                         </a>
                     </Link>
                 </div>
@@ -56,8 +61,8 @@ const Contact = ({ scrollUpFunction, styleScrollUp }) => {
             </section>
             <section id='section3' className={styles.section3}>
                 <figure>
-                    <Image 
-                        src="/ContactUs.png" 
+                    <Image
+                        src="/ContactUs.png"
                         alt=""
                         width={650}
                         height={500}

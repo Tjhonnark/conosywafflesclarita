@@ -37,36 +37,38 @@ const Forms = ({ modalFormSend, setModalFormSend }) => {
                     <h2>Hable con nosotros</h2>
                 </div>
                 <div className={styles.name}>
-                    <label>Nombre</label>
                     <input type="text" name="user_name"
                         value={name}
                         onChange={e => setName(e.target.value)} required />
+                    <label>Nombre</label>
                 </div>
                 <div className={styles.email}>
-                    <label>Email</label>
                     <input type="email" name="user_email"
                         value={email}
                         onChange={e => setEmail(e.target.value)} required />
+                    <label>Email</label>
                 </div>
                 <div className={styles.phone}>
-                    <label>Teléfono</label>
                     <input type="tel" name="phone"
                         value={phone}
                         onChange={e => setPhone(e.target.value)} required />
+                    <label>Teléfono</label>
                 </div>
                 <div className={styles.affair}>
+                    <input type="text" name="affair" required />
                     <label>Asunto</label>
-                    <input type="text" name="affair" />
                 </div>
                 <div className={styles.message}>
+                    <textarea type="text" name="affair" required />
                     <label>Mensaje</label>
-                    <textarea name="message" />
                 </div>
-                <button type="submit" value="Send"
-                    className={styles.send}
-                    onClick={modal}>
-                    Enviar
-                </button>
+                <div className={styles.buttonDiv}>
+                    <button type="submit" value="Send"
+                        className={styles.send}
+                        onClick={modal}>
+                        Enviar
+                    </button>
+                </div>
             </form>
         </>
     )

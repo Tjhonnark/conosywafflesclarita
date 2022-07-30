@@ -36,9 +36,6 @@
   width: 90%;
   margin: 0;
 }
-.text_s1 button {
-  margin: 0;
-}
 .section1 figure {
   width: 650px;
   margin: 0;
@@ -47,68 +44,62 @@
   width: 100%;
 }
 
-/* From uiverse.io by @satyamchaudharydev */
-.button_s1 {
+/* From uiverse.io by @adamgiebl */
+.buttonS1 {
+  font-family: inherit;
+  font-size: 20px;
   text-decoration: none;
-  --primary-color: #645bff;
-  --secondary-color: #fff;
-  --hover-color: #111;
-  --arrow-width: 10px;
-  --arrow-stroke: 2px;
-  box-sizing: border-box;
-  border: 0;
-  border-radius: 20px;
-  color: var(--secondary-color);
-  padding: 1em 1.8em;
-  background: var(--primary-color);
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
   display: flex;
-  transition: 0.2s background;
   align-items: center;
-  gap: 0.6em;
-  font-weight: bold;
-}
-
-.arrowWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.arrow {
-  margin-top: 1px;
-  width: var(--arrow-width);
-  background: var(--primary-color);
-  height: var(--arrow-stroke);
-  position: relative;
-  transition: 0.2s;
-}
-
-.arrow::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  border: solid var(--secondary-color);
-  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
-  display: inline-block;
-  top: -3px;
-  right: 3px;
-  transition: 0.2s;
-  padding: 3px;
-  transform: rotate(-45deg);
-}
-
-.button_s1:hover {
-  background-color: var(--hover-color);
-  color: #fff;
-}
-
-.button_s1:hover .arrow {
-  background: var(--secondary-color);
-}
-
-.button_s1:hover .arrow:before {
-  right: 0;
-}
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+ }
+ 
+ .buttonS1 span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ .buttonS1 svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+ }
+ 
+ .buttonS1:hover .svgWrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+ }
+ 
+ .buttonS1:hover svg {
+  color: #ffffff;
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+ }
+ 
+ .buttonS1:hover span {
+  color: #ffffff;
+  transform: translateX(5em);
+ }
+ 
+ .buttonS1:active {
+  transform: scale(0.95);
+ }
+ 
+ @keyframes fly-1 {
+  from {
+   transform: translateY(0.1em);
+  }
+ 
+  to {
+   transform: translateY(-0.1em);
+  }
+ } 
 
 /* SECTION 2 */
 .section2 {
@@ -154,7 +145,7 @@
 /* FORM */
 .contact_form {
   background-color: #ffffff;
-  flex-basis: 505px;
+  flex-basis: 550px;
   padding: 1.5em;
   border-radius: 25px;
   display: flex;
