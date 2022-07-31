@@ -5,9 +5,8 @@
       padding-right: 5px;
   }
   .contact_item a {
-    color: #000;
     text-decoration: none;
   }
-  .contact_item a:hover {
-    color: rgb(0, 136, 255);
+  .contact_item:hover {
+    color: rgb(0, 0, 0);
   }

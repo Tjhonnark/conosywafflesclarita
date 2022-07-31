@@ -34,7 +34,8 @@ export default function Products({ scrollUpFunction, styleScrollUp }) {
     const cart = () => {
         setModalForm(!modalForm)
         var sound = new Audio('sounds/cart.wav')
-        sound.play()
+        sound.play();
+        sound.volume = 0.2;
     }
 
     // Ocultar carrito
@@ -74,7 +75,7 @@ export default function Products({ scrollUpFunction, styleScrollUp }) {
                 setModalFormSend={setModalFormSend}
             />
             <button
-                className={styleCart || modalForm ? styles.cart2 : styles.cart}
+                className={styleCart || modalForm || modalFormSend ? styles.cart2 : styles.cart}
                 onClick={cart}
             >
                 <i className="bi bi-cart4"></i>

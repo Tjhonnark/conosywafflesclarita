@@ -5,12 +5,12 @@ export const clients = [
         image: '/logo.png',
     },
     {
-        id: 1,
+        id: 2,
         company: 'Company 2',
         image: '/logo.png',
     },
     {
-        id: 1,
+        id: 3,
         company: 'Company 3',
         image: '/logo.png',
     },

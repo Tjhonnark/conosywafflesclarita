@@ -1,21 +1,17 @@
 .body {
-  /* background-color: #fc3c74; */
-}
-.body h1 {
-  color: azure;
-  margin: 0 0 2rem 0;
-  flex-basis: 100%;
-  text-align: center;
+  background-color: #fc3c74;
 }
 
 /* SECTION 1 */
 .section1 {
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   gap: 5rem;
+}
+.imageS1 {
 }
 .text_s1 {
   width: 450px;
@@ -26,22 +22,16 @@
   gap: 1.5rem;
 }
 .text_s1 h1 {
-  color: #000;
+  color: #fff;
   margin: 0;
   text-align: start;
   font-size: 4.5rem;
   font-weight: bold;
 }
 .text_s1 p {
+  color: #fff;
   width: 90%;
   margin: 0;
-}
-.section1 figure {
-  width: 650px;
-  margin: 0;
-}
-.section1 figure img {
-  width: 100%;
 }
 
 /* From uiverse.io by @adamgiebl */
@@ -49,8 +39,8 @@
   font-family: inherit;
   font-size: 20px;
   text-decoration: none;
-  background: royalblue;
-  color: white;
+  background: #fff;
+  color: #fc3c74;
   padding: 0.7em 1em;
   padding-left: 0.9em;
   display: flex;
@@ -78,12 +68,12 @@
  }
  
  .buttonS1:hover svg {
-  color: #ffffff;
+  color: #fc3c74;
   transform: translateX(1.2em) rotate(45deg) scale(1.1);
  }
  
  .buttonS1:hover span {
-  color: #ffffff;
+  color: #fc3c74;
   transform: translateX(5em);
  }
  
@@ -116,7 +106,7 @@
 }
 /* INFO */
 .info {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   width: 350px;
   padding: 0rem;
   text-align: start;
@@ -125,6 +115,15 @@
   align-items: flex-start;
   gap: 1em;
 }
+.info h3 {
+  font-size: 2.5rem;
+}
+.info a {
+  color: #fff;
+}
+.info a:hover {
+  color: #000;
+}
 
 /* SECTION 3 */
 .section3 {
@@ -132,19 +131,11 @@
   padding: 6rem 0 2rem 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-}
-.section3 figure {
-  width: 650px;
-  margin: 0;
-}
-.section3 figure img {
-  width: 100%;
 }
 /* FORM */
 .contact_form {
-  background-color: #ffffff;
   flex-basis: 550px;
   padding: 1.5em;
   border-radius: 25px;

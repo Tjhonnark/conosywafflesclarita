@@ -118,8 +118,8 @@ export default function About({ scrollUpFunction, styleScrollUp }) {
                     {
                         clients.map((client) => {
                             return (
-                                <Image 
-                                className={styles.client}
+                                <Image key={client.id}
+                                    className={styles.client}
                                     src={client.image}
                                     alt=''
                                     width={150}

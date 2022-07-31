@@ -12,7 +12,6 @@ const FormSend = ({ modalFormSend, setModalFormSend }) => {
         <>
             <div className={modalFormSend?styles.container:styles.container2}>
                 <div className={styles.modal}>
-                <div className={styles.ifake}></div>
                 <i className="bi bi-check-circle-fill"></i>
                     <div className={styles.header}>
                         <h3>¡Gracias!</h3>
@@ -24,7 +23,7 @@ const FormSend = ({ modalFormSend, setModalFormSend }) => {
                     </div>
                     <div className={styles.footer}>
                         <button onClick={resetForm}>
-                            Ok
+                            Listo
                         </button>
                     </div>
                 </div>

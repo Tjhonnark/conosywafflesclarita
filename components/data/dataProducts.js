@@ -59,4 +59,22 @@ export const initialProducts = [
         image: '/example.jpg',
         select: false
     },
+    {
+        id: 11,
+        name: 'Producto 11',
+        image: '/example.jpg',
+        select: false
+    },
+    {
+        id: 12,
+        name: 'Producto 12',
+        image: '/example.jpg',
+        select: false
+    },
+    {
+        id: 13,
+        name: 'Producto 13',
+        image: '/example.jpg',
+        select: false
+    },
 ]

@@ -62,7 +62,8 @@ export default function Footer(props) {
                         {
                             initialProducts.map((product) => {
                                 return (
-                                    <div className={styles.itemProduct}>
+                                    <div key={product.id} 
+                                    className={styles.itemProduct}>
                                         <Link href={"/products#" + product.id} >
                                             <a aria-current="page">{product.name}</a>
                                         </Link>

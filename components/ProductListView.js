@@ -4,7 +4,10 @@ import styles from '../styles/ProductListView.module.css'
 
 const ProductListView = ({ product, productToggleSelect }) => {
     return (
-        <div id={product.id} className={product.select?styles.card_select:styles.card} key={product.id}>
+        <button id={product.id} key={product.id}
+        className={product.select?styles.card_select:styles.card}
+        onClick={() => productToggleSelect(product.id)}
+        >
             <Image 
                 className={styles.image}
                 src={product.image}
@@ -15,9 +18,8 @@ const ProductListView = ({ product, productToggleSelect }) => {
             />
             <div className={styles.card_text}>
                 <h3>{product.name}</h3>
-                <button onClick={() => productToggleSelect(product.id)}>Agregar</button>
             </div>
-        </div>
+        </button>
     )
 }
 

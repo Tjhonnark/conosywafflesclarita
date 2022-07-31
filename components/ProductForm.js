@@ -12,7 +12,7 @@ const ProductForm = ({ products, productToggleSelect, modalForm, setModalForm, m
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_h6a8jse', 'template_a3q76ph', form.current, 'JzMjMHeAhJEb6uKG5')
+        emailjs.sendForm('service_h6a8jse', 'template_968kuzh', form.current, 'JzMjMHeAhJEb6uKG5')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -30,19 +30,19 @@ const ProductForm = ({ products, productToggleSelect, modalForm, setModalForm, m
     const [email, setEmail] = useState();
     const [phone, setPhone] = useState();
 
-
-
     const modal = () => {
         if (name === undefined || name === '' || email === undefined || email === '' || phone === undefined || phone === '') {
             setModalFormSend(modalFormSend)
             setModalForm(modalForm)
             var sound = new Audio('sounds/error.wav')
             sound.play()
+            sound.volume = 0.5;
         } else {
             setModalFormSend(!modalFormSend)
             setModalForm(!modalForm)
             var sound = new Audio('sounds/send.wav')
             sound.play()
+            sound.volume = 0.5;
         }
     }
 
@@ -50,8 +50,9 @@ const ProductForm = ({ products, productToggleSelect, modalForm, setModalForm, m
         setModalForm(!modalForm)
         var sound = new Audio('sounds/close.wav')
         sound.play()
+        sound.volume = 0.2;
     }
-
+    
     return (
         <>
             <form id="formulario" ref={form} onSubmit={sendEmail} className={modalForm ? styles.productForm : styles.productForm2} autoComplete="off">
@@ -68,13 +69,12 @@ const ProductForm = ({ products, productToggleSelect, modalForm, setModalForm, m
                     </div>
                     <div className={styles.form}>
                         <div className={styles.name}>
-                            <input type="text" name="user_name" maxLength="25" value={name}
+                            <input type="text" name="user_name" value={name}
                                 onChange={e => setName(e.target.value)} required />
                             <label>Nombre</label>
                         </div>
                         <div className={styles.phone}>
                             <input type="tel" name="phone"
-                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 value={phone}
                                 onChange={e => setPhone(e.target.value)}
                                 required />
@@ -92,15 +92,13 @@ const ProductForm = ({ products, productToggleSelect, modalForm, setModalForm, m
                         <div className={styles.productsEmail}>
                             <textarea name='products'
                                 className={styles.input}
-                                value={productSelect} readOnly/>
+                                value={productSelect}
+                                /* readOnly *//>
                         </div>
                         <button type="submit" value="Send" onClick={modal} className={styles.send} >Enviar</button>
                     </div>
                 </div>
             </form>
-            {/* <div className={modalForm?styles.test1:styles.test2}>
-                <h1>Hola</h1>
-            </div> */}
         </>
     )
 }

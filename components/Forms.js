@@ -25,8 +25,12 @@ const Forms = ({ modalFormSend, setModalFormSend }) => {
     const modal = () => {
         if (name === undefined || name === '' || email === undefined || email === '' || phone === undefined || phone === '') {
             setModalFormSend(modalFormSend)
+            var sound = new Audio('sounds/error.wav')
+            sound.play()
         } else {
             setModalFormSend(!modalFormSend)
+            var sound = new Audio('sounds/send.wav')
+            sound.play()
         }
     }
 
@@ -40,26 +44,36 @@ const Forms = ({ modalFormSend, setModalFormSend }) => {
                     <input type="text" name="user_name"
                         value={name}
                         onChange={e => setName(e.target.value)} required />
+                    <span className={styles.highlight}></span>
+                    <span className={styles.bar}></span>
                     <label>Nombre</label>
                 </div>
                 <div className={styles.email}>
-                    <input type="email" name="user_email"
+                    <input type="text" name="user_email"
                         value={email}
                         onChange={e => setEmail(e.target.value)} required />
+                    <span className={styles.highlight}></span>
+                    <span className={styles.bar}></span>
                     <label>Email</label>
                 </div>
                 <div className={styles.phone}>
                     <input type="tel" name="phone"
                         value={phone}
                         onChange={e => setPhone(e.target.value)} required />
+                    <span className={styles.highlight}></span>
+                    <span className={styles.bar}></span>
                     <label>Teléfono</label>
                 </div>
                 <div className={styles.affair}>
                     <input type="text" name="affair" required />
+                    <span className={styles.highlight}></span>
+                    <span className={styles.bar}></span>
                     <label>Asunto</label>
                 </div>
-                <div className={styles.message}>
-                    <textarea type="text" name="affair" required />
+                <div className={styles.message} >
+                    <textarea type="text" name="message" required />
+                    <span className={styles.highlight}></span>
+                    <span className={styles.bar}></span>
                     <label>Mensaje</label>
                 </div>
                 <div className={styles.buttonDiv}>

@@ -78,6 +78,9 @@
   flex-basis: 400px;
   gap: 1em;
 }
+.info a {
+  color: #fff;
+}
 
 /* WEBAPP */
 .webapp a {

@@ -7,7 +7,7 @@ const ScrollUp = ({ scrollUpFunction, styleScrollUp }) => {
         <button
             className={styleScrollUp ? styles.scrollUp2 : styles.scrollUp}
             onClick={scrollUpFunction}>
-            <i class="bi bi-arrow-up-short"></i>
+            <i className="bi bi-arrow-up-short"></i>
         </button>
     )
 }

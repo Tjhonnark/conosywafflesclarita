@@ -37,8 +37,8 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                         <Link href='/products'>
                             <a className={styles.button_a1s2}>
                                 Ordenar pedido
-                                <div class={styles.arrowWrapper}>
-                                    <div class={styles.arrow}></div>
+                                <div className={styles.arrowWrapper}>
+                                    <div className={styles.arrow}></div>
                                 </div>
                             </a>
                         </Link>
@@ -59,8 +59,8 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
                         <Link href='/products'>
                             <a className={styles.button_a2s2}>
                                 Ordenar pedido
-                                <div class={styles.arrowWrapper}>
-                                    <div class={styles.arrow}></div>
+                                <div className={styles.arrowWrapper}>
+                                    <div className={styles.arrow}></div>
                                 </div>
                             </a>
                         </Link>
