@@ -17,17 +17,15 @@ function Home({ scrollUpFunction, styleScrollUp }) {
         <div className={styles.body}>
             <Navbar />
             <section id='section1' className={styles.section1}>
-                {
-                    size.width >= 415 ?
-                        <Image
-                            className={styles.imageS1}
-                            src="/icecream.jpg"
-                            alt=""
-                            width={1400}
-                            height={570}
-                            objectFit="cover"
-                        /> :
-                        <Image
+                <Image
+                    className={styles.imageS1}
+                    src="/icecream.jpg"
+                    alt=""
+                    width={1400}
+                    height={570}
+                    objectFit="cover"
+                />
+                {/* <Image
                             className={styles.imageS1}
                             src="/icecream.jpg"
                             alt=""
@@ -35,8 +33,7 @@ function Home({ scrollUpFunction, styleScrollUp }) {
                             height={573}
                             objectFit="cover"
                             objectPosition="15%"
-                        />
-                }
+                        /> */}
                 <div className={styles.text1_a1_s1}>
                     <h1>Conos y Waffles Clarita</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
