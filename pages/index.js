@@ -1,25 +1,42 @@
+import { useEffect } from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
 /* COMPONENTS */
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 import ScrollUp from '../components/ScrollUp'
+import UseWindowSize from '../components/UseWindowSize';
 /* STYLES */
 import styles from '../styles/Home.module.css';
 
-export default function Home({ scrollUpFunction, styleScrollUp }) {
+function Home({ scrollUpFunction, styleScrollUp }) {
+
+    const size = UseWindowSize();
+    /* console.log(size.width) */
     return (
         <div className={styles.body}>
             <Navbar />
             <section id='section1' className={styles.section1}>
-                <Image
-                    className={styles.imageS1}
-                    src="/icecream.jpg"
-                    alt=""
-                    width={1350}
-                    height={550}
-                    objectFit="cover"
-                />
+                {
+                    size.width >= 415 ?
+                        <Image
+                            className={styles.imageS1}
+                            src="/icecream.jpg"
+                            alt=""
+                            width={1400}
+                            height={570}
+                            objectFit="cover"
+                        /> :
+                        <Image
+                            className={styles.imageS1}
+                            src="/icecream.jpg"
+                            alt=""
+                            width={414}
+                            height={573}
+                            objectFit="cover"
+                            objectPosition="15%"
+                        />
+                }
                 <div className={styles.text1_a1_s1}>
                     <h1>Conos y Waffles Clarita</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -125,3 +142,4 @@ export default function Home({ scrollUpFunction, styleScrollUp }) {
         </div>
     )
 }
+export default Home;

@@ -17,413 +17,60 @@
   margin-bottom: 1rem;
   text-align: start;
 }
-
-/* From uiverse.io by @G4b413l */
-/* NAME */
+.form label {
+  color: #fff;
+} 
+.form div input,
+.form div textarea {
+  background: none;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid #fff;
+  resize: none;
+}
 .name {
-  position: relative;
+  flex-basis: 12rem;
 }
-.name input {
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 200px;
-  border: none;
-  border-bottom: 1px solid #515151;
-  background: transparent;
-  resize: none;
-}
-.name input:focus {
-  outline: none;
-}
-.name label {
-  color: #999;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-.name input:focus ~ label,
-.name input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: #5264ae;
-}
-.bar {
-  position: relative;
-  display: block;
-  width: 200px;
-}
-.bar:before,
-.bar:after {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: #5264ae;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-.bar:before {
-  left: 50%;
-}
-.bar:after {
-  right: 50%;
-}
-.name input:focus ~ .bar:before,
-.name input:focus ~ .bar:after {
-  width: 50%;
-}
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-.name input:focus ~ .highlight {
-  animation: inputHighlighter 0.3s ease;
-}
-/* EMAIL */
 .email {
-  position: relative;
+  flex-basis: 16rem;
 }
-.email input {
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 260px;
-  border: none;
-  border-bottom: 1px solid #515151;
-  background: transparent;
-  resize: none;
-}
-.email input:focus {
-  outline: none;
-}
-.email label {
-  color: #999;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-.email input:focus ~ label,
-.email input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: #5264ae;
-}
-.bar {
-  background-color: #ffffff;
-  position: relative;
-  display: block;
-  width: 500px;
-}
-.bar:before,
-.bar:after {
-  content: "";
-  height: 2px;
-  width: 50px;
-  bottom: 1px;
-  position: absolute;
-  background: #5264ae;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-.bar:before {
-  left: 50%;
-}
-.bar:after {
-  right: 50%;
-}
-.email input:focus ~ .bar:before,
-.email input:focus ~ .bar:after {
-  width: 50%;
-}
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-.email input:focus ~ .highlight {
-  animation: inputHighlighter 0.3s ease;
-}
-/* PHONE */
 .phone {
-  position: relative;
+  flex-basis: 12rem;
 }
-.phone input {
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 200px;
-  border: none;
-  border-bottom: 1px solid #515151;
-  background: transparent;
-  resize: none;
-}
-.phone input:focus {
-  outline: none;
-}
-.phone label {
-  color: #999;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-.phone input:focus ~ label,
-.phone input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: #5264ae;
-}
-.bar {
-  position: relative;
-  display: block;
-  width: 200px;
-}
-.bar:before,
-.bar:after {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: #5264ae;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-.bar:before {
-  left: 50%;
-}
-.bar:after {
-  right: 50%;
-}
-.phone input:focus ~ .bar:before,
-.phone input:focus ~ .bar:after {
-  width: 50%;
-}
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-.phone input:focus ~ .highlight {
-  animation: inputHighlighter 0.3s ease;
-}
-/* AFFAIR */
 .affair {
-  position: relative;
+  flex-basis: 16rem;
 }
-.affair input {
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 260px;
-  border: none;
-  border-bottom: 1px solid #515151;
-  background: transparent;
-  resize: none;
-}
-.affair input:focus {
-  outline: none;
-}
-.affair label {
-  color: #999;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-.affair input:focus ~ label,
-.affair input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: #5264ae;
-}
-.bar {
-  position: relative;
-  display: block;
-  width: 200px;
-}
-.bar:before,
-.bar:after {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: #5264ae;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-.bar:before {
-  left: 50%;
-}
-.bar:after {
-  right: 50%;
-}
-.affair input:focus ~ .bar:before,
-.affair input:focus ~ .bar:after {
-  width: 50%;
-}
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-.affair input:focus ~ .highlight {
-  animation: inputHighlighter 0.3s ease;
-}
-/* MESSAGE */
 .message {
-  position: relative;
-  width: 100%;
+  flex-basis: 100%;
 }
-.message textarea {
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
+
+/* BUTTON SEND */
+.send {
   width: 100%;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
   border: none;
-  border-bottom: 1px solid #515151;
-  background: transparent;
-  resize: none;
-}
-.message textarea:focus {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
   outline: none;
 }
-.message label {
-  color: #999;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
+.send:hover {
+  background-color: #000;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  transform: translateY(-5px);
 }
-.message textarea:focus ~ label,
-.message textarea:valid ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: #5264ae;
-}
-.bar {
-  position: relative;
-  display: block;
-  width: 200px;
-}
-.bar:before,
-.bar:after {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: #5264ae;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-.bar:before {
-  left: 50%;
-}
-.bar:after {
-  right: 50%;
-}
-.message textarea:focus ~ .bar:before,
-.message textarea:focus ~ .bar:after {
-  width: 50%;
-}
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-.message textarea:focus ~ .highlight {
-  animation: inputHighlighter 0.3s ease;
-}
-
-@keyframes inputHighlighter {
-  from {
-    background: #5264ae;
-  }
-
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-
-/* BUTTON */
-.buttonDiv {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.buttonDiv button {
-  background: #fff;
-  color: #000;
-  width: 100%;
-  padding: 1em;
-  border: 0;
-  border-radius: 1rem;
-  font-weight: bold;
-}
-.buttonDiv button:hover,
-.buttonDiv button:focus {
-  transition: background-color 1s ease-out;
-}
-.buttonDiv button:active {
-  background: #fc3c74;
+.send:active {
   transform: scale(0.95);
   transition: all 0.5s ease 0s;
 }

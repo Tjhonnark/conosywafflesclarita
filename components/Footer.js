@@ -86,7 +86,7 @@ export default function Footer(props) {
                     rel="noopener noreferrer"
                 >
                     Powered by{' '}
-                    <h3 className={styles.webapp_title}>WebApp</h3>
+                    <h3 className={styles.webapp_title}>ThomasDev</h3>
                 </a>
             </div>
         </footer>

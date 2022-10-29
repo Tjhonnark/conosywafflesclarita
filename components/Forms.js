@@ -41,48 +41,36 @@ const Forms = ({ modalFormSend, setModalFormSend }) => {
                     <h2>Hable con nosotros</h2>
                 </div>
                 <div className={styles.name}>
+                    <label>Nombre</label>
                     <input type="text" name="user_name"
                         value={name}
                         onChange={e => setName(e.target.value)} required />
-                    <span className={styles.highlight}></span>
-                    <span className={styles.bar}></span>
-                    <label>Nombre</label>
                 </div>
                 <div className={styles.email}>
+                    <label>Email</label>
                     <input type="text" name="user_email"
                         value={email}
                         onChange={e => setEmail(e.target.value)} required />
-                    <span className={styles.highlight}></span>
-                    <span className={styles.bar}></span>
-                    <label>Email</label>
                 </div>
                 <div className={styles.phone}>
+                    <label>Teléfono</label>
                     <input type="tel" name="phone"
                         value={phone}
                         onChange={e => setPhone(e.target.value)} required />
-                    <span className={styles.highlight}></span>
-                    <span className={styles.bar}></span>
-                    <label>Teléfono</label>
                 </div>
                 <div className={styles.affair}>
-                    <input type="text" name="affair" required />
-                    <span className={styles.highlight}></span>
-                    <span className={styles.bar}></span>
                     <label>Asunto</label>
+                    <input type="text" name="affair" required />
                 </div>
                 <div className={styles.message} >
-                    <textarea type="text" name="message" required />
-                    <span className={styles.highlight}></span>
-                    <span className={styles.bar}></span>
                     <label>Mensaje</label>
+                    <textarea type="text" name="message" required />
                 </div>
-                <div className={styles.buttonDiv}>
-                    <button type="submit" value="Send"
-                        className={styles.send}
-                        onClick={modal}>
-                        Enviar
-                    </button>
-                </div>
+                <button type="submit" value="Send"
+                    className={styles.send}
+                    onClick={modal}>
+                    Enviar
+                </button>
             </form>
         </>
     )

@@ -10,6 +10,7 @@ import { clients } from '../components/data/dataClients';
 import styles from '../styles/About.module.css'
 
 export default function About({ scrollUpFunction, styleScrollUp }) {
+
     return (
         <div className={styles.body}>
             <Navbar />
